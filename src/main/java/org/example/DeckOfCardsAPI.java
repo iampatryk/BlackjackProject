@@ -22,6 +22,19 @@ public class DeckOfCardsAPI {
         System.out.println(response.statusCode());
         System.out.println(response.body());
     }
+
+    public void drawCard(String deckID, int count) throws IOException, InterruptedException {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .GET()
+                .uri(URI.create(adsressURL + deckID +"/draw/?count=" + count))
+                .build();
+
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response.statusCode());
+        System.out.println(response.body());
+    }
 }
 
 

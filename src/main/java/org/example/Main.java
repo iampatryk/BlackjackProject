@@ -7,5 +7,6 @@ public class Main {
 
         DeckOfCardsAPI deckOfCardsAPI = new DeckOfCardsAPI();
         deckOfCardsAPI.getShuffledDecks(4);
+        deckOfCardsAPI.drawCard("new",2);
     }
 }
