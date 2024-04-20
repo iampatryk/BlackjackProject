@@ -13,8 +13,8 @@ public class TestsDeckOfCardAPI {
 
     @Test
     public void getShuffledDecksTest() throws IOException, InterruptedException {
-
         int deckCount = 2;
+
         HttpResponse response = deckOfCardsAPI.getShuffledDecks(deckCount);
 
         Assertions.assertNotNull(response);
@@ -29,13 +29,12 @@ public class TestsDeckOfCardAPI {
     public void drawCardTest() throws IOException, InterruptedException {
         String deckID = "new";
         int count = 2;
-//        HttpResponse response = deckOfCardsAPI.drawCard("new", 2);
+
         HttpResponse response = deckOfCardsAPI.drawCard(deckID,count);
 
         Assertions.assertNotNull(response);
         Assertions.assertEquals(200, response.statusCode());
         Assertions.assertNotNull(response.body());
-//        Assertions.assertEquals(response,deckOfCardsAPI.drawCard(deckID, count));
 
 
     }
