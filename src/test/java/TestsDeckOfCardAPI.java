@@ -18,9 +18,9 @@ public class TestsDeckOfCardAPI {
         HttpResponse response = deckOfCardsAPI.getShuffledDecks(deckCount);
 
         Assertions.assertNotNull(response);
-        assertEquals(200, response.statusCode());
+        Assertions.assertEquals(200, response.statusCode());
         Assertions.assertNotNull(response.body());
-        assertEquals(2,2);
+        Assertions.assertEquals(2,2);
 
 
     }
@@ -33,8 +33,8 @@ public class TestsDeckOfCardAPI {
         HttpResponse response = deckOfCardsAPI.drawCard(deckID,count);
 
         Assertions.assertNotNull(response);
-        Assertions.assertEquals(200, response.statusCode());
         Assertions.assertNotNull(response.body());
+        Assertions.assertEquals(200, response.statusCode());
 
 
     }
