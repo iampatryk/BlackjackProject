@@ -46,11 +46,3 @@ public class DeckOfCardsAPI {
     }
 }
 
-
-/*
-getShuffledDecks → which asks for shuffled decks, amount of which is determined
-by the parameter. What is returned is the HttpResponse;
-
-drawCards → using deck ID and count parameter which is responsible
-for amount of cards to be drawn return HttpResponse.
- */
