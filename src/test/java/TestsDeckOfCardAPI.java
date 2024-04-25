@@ -21,7 +21,7 @@ public class TestsDeckOfCardAPI {
         Assertions.assertEquals(200, response.statusCode());
         Assertions.assertNotNull(response.body());
         Assertions.assertEquals(2,2);
-
+        Assertions.assertNotEquals(5,2);
 
     }
 
@@ -35,7 +35,7 @@ public class TestsDeckOfCardAPI {
         Assertions.assertNotNull(response);
         Assertions.assertNotNull(response.body());
         Assertions.assertEquals(200, response.statusCode());
-
+        Assertions.assertNotEquals(400,response.statusCode());
 
     }
 
